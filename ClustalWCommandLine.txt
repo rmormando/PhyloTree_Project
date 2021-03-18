@@ -1,0 +1,13 @@
+Steps for running ClustalW in Command Line
+
+most steps from: http://wiki.christophchamp.com/index.php?title=ClustalW
+
+1. Create a directory for ClustalW and outputs
+	for example mkdir Clustal
+	and in Clustal mkdir ClustalW where the actual program would go
+2. Make a file path to the data, usually use FASTA files (no FASTQ file option)
+3. Using the command clustalw -quicktree -interactive will create a standard tree
+	it can be changed by accessing clustalw -help, clustalw -options, clustalw -check
+4. From clustalw program, you can create a newick tree that can be translated into a more readable phylogenetic tree
+
+*ClustalV program also on Linux can be used for aligning proteins.
