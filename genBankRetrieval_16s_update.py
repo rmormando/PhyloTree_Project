@@ -24,21 +24,15 @@ speHandle = Entrez.efetch(db="nucleotide",id = idList[0],rettype = "gb", retmode
 #attempting to piece together the upper and bottom chunks of code
 
 #for genome in speRecord:
-for record in SeqIO.parse(speHandle,'genbank'):
+for record in SeqIO.parse(file,'genbank'):
     for gene in record.features:
-        print(gene)
         if gene.type=="rRNA": 
             if 'product' in gene.qualifiers:
                 if '16S' in gene.qualifiers['product'][0]:
+                    #print("16s found")
+                    #works up to here
                     start = gene.location.nofuzzy_start
                     end = gene.location.nofuzzy_end
-                    if 'db_xref' in gene.qualifiers:
-                        gi=[]
-                        gi=str(gene.qualifiers['db_xref'])
-                        gi=gi.split(":")[1]
-                        gi=gi.split("'")[0]
-                        print (">GeneId|%s|16S rRNA|%s\n%s" % (gi,genome.description,genome.seq[start:end]))
-                    else:
-                        print (">GeneId|NoGenID|16S rRNA|%s\n%s" % (genome.description,genome.seq[start:end]))
+                    print(record.seq[start:end])
 
         
