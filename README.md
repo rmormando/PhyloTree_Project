@@ -5,13 +5,17 @@ A bioinformatics pipeline for microbiome data analysis using phylogenetic trees.
 
 
 ## Introduction
+Understanding phylogenetic relationships between different species is crucial for evolutionary studies. Reconstructing the phylogenetic species tree, a branching diagram, is particularly useful in inferring evolutionary relationships. For example, the tree-of-life provides a remarkable view of organizing principles of the biological world. So, the exact species tree to be reconstructed is necessary, but the process of reconstructing the species or gene tree is very tedious.
 
+Here, we developed an easy-to-use pipeline that conveniently and effiecently reconstructs species trees.
 
 ## Pipeline Workflow
-
+(insert flowchart pic here)
 
 ## Features
-
+- Inputs only include species names.
+- One command line to build trees.
+- View trees using ETE.
 
 ## Install
 
