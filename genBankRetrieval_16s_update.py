@@ -16,7 +16,7 @@ record = Entrez.read(handle)
 idList = record["IdList"] #Id list of entries that match the term
 #print(idList)
 #use the first id list match to search for specific nucleotide sequences
-speHandle = Entrez.efetch(db="nucleotide",id = idList[1],rettype = "gb", retmode = 'text')
+speHandle = Entrez.efetch(db="nucleotide",id = idList[0],rettype = "gb", retmode = 'text')
 #speRecord = SeqIO.parse(speHandle,"genbank")
 #print(speRecord)
 
