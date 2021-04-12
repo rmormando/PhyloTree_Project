@@ -31,10 +31,10 @@ cd PhyloTree_Project
 
 ## Directions
 
-**1. Download the sample data set or use your own**
+**1. Download the sample data set or use your own** 
 Make sure it's a text file of taxonomy names separated by line.
 
-**2. Obtain the 16S raw reads from NCBI**
+**2. Obtain the 16S raw reads from NCBI** 
 Using the txt file of sample data retrieve the 16s raw reads from NCBI's public database in FASTA format.
 
 Run this line of code with the txt file to retrieve them:
