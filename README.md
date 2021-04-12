@@ -20,13 +20,36 @@ Here, we developed an easy-to-use pipeline that conveniently and effiecently rec
 ## Install
 In order to run this code from your working directory, use this git command to clone this repository to your workspace:
 ```
-git clone https://github.com/lmaskeri/Identifying-Genes-Associated-with-Symptom-Status
+git clone https://github.com/rmormando/PhyloTree_Project.git
 ```
 
 Then, change working directories in order to access all files from the cloned repo:
 
 ```
-cd Identifying-Genes-Associated-with-Symptom-Status
+cd PhyloTree_Project
+```
+
+## Directions
+
+**1. Download the sample data set or use your own**
+Make sure it's a text file of taxonomy names separated by line.
+
+**2. Obtain the 16S raw reads from NCBI**
+Using the txt file of sample data retrieve the 16s raw reads from NCBI's public database in FASTA format.
+
+Run this line of code with the txt file to retrieve them:
+```
+[code here]
+```
+
+**3. Use the generated FASTA file to generate the tree**
+Run this line of code with the FASTA file to generate the tree:
+- choose a workflow name (-w)
+- choose FASTA target seqeunces (-a for amino acids and -n for nucleotides)
+- choose a name for the output tree file (-o)
+
+```
+ete3 build -a [fastafile].fasta -w soft_modeltest -o output_tree
 ```
 
 ## Usage
