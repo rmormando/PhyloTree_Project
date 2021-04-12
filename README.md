@@ -10,7 +10,7 @@ Understanding phylogenetic relationships between different species is crucial fo
 Here, we developed an easy-to-use pipeline that conveniently and effiecently reconstructs species trees.
 
 ## Pipeline Workflow
-![Proposed solution PNG](https://github.com/rmormando/PhyloTree_Project/blob/main/updated_workflow.png)
+![Proposed solution PNG](https://github.com/rmormando/PhyloTree_Project/blob/main/workflow_images/updated_workflow.png)
 
 ## Features
 - Inputs only include species names.
