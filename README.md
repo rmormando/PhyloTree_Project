@@ -18,6 +18,15 @@ Here, we developed an easy-to-use pipeline that conveniently and effiecently rec
 - View trees using ETE.
 
 ## Install
+In order to run this code from your working directory, use this git command to clone this repository to your workspace:
+```
+git clone https://github.com/lmaskeri/Identifying-Genes-Associated-with-Symptom-Status
+```
 
+Then, change working directories in order to access all files from the cloned repo:
+
+```
+cd Identifying-Genes-Associated-with-Symptom-Status
+```
 
 ## Usage
