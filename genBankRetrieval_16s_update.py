@@ -13,25 +13,38 @@ speList = file.read().split("\n")
 
 Entrez.email = "rrajagopal@luc.edu" #for entrez search in loop
 
+outfile = open("16Sout.txt","w")
+log = open("PhyloTreeLog.log","w")
+
+accList = []
 for name in speList:
-    handle = Entrez.esearch(db="nucleotide", term = name) #searching genbak via Entrez
+    handle = Entrez.esearch(db="nucleotide", term = name + " AND refseq[filter]") #searching genbank via Entrez and looking for only refseq entries
     record = Entrez.read(handle)
     idList = record["IdList"] #Id list of entries that match the term
     #use the first id list match to search for specific nucleotide sequences
-    speHandle = Entrez.efetch(db="nucleotide",id = idList[0],rettype = "gb", retmode = 'text')
+    #add to list to search for 16S sequence later
+    temp = (name, idList[0])
+    accList.append(temp)
+
+#split finding accession numbers and searching for 16S sequences for easier trouble shooting
+for num in accList:
+    speHandle = Entrez.efetch(db="nucleotide",id = num[1],rettype = "gb", retmode = 'text')
     speRecord = SeqIO.read(speHandle,"genbank")
     #print(speRecord)
-
     for gene in speRecord.features:
         if gene.type=="rRNA": 
             if 'product' in gene.qualifiers:
                 if '16S' in gene.qualifiers['product'][0]:
+                    #print("16S found")
+                    log.write(num[0] + " 16S Sequence Found; accession number " + num[1])
                     start = gene.location.nofuzzy_start
                     end = gene.location.nofuzzy_end
                     if 'db_xref' in gene.qualifiers:
                         dbID=str(gene.qualifiers['db_xref'])
-                        print(">" + dbID + " name 16S rRNA sequence" + "\n" + str(speRecord.seq[start:end]))
+                        outfile.write(">" + num[0] + " 16S rRNA sequence" + "\n" + str(speRecord.seq[start:end]) + "\n")
                         break
+outfile.close()
+log.close()
 
 
         
