@@ -1,10 +1,10 @@
 Staphylococcus epidermidis
 Pseudomonas putida
-Escherichia coli EDL933
-Buchnera aphidicola APS
+Escherichia coli
+Buchnera aphidicola
 Photobacterium profundum
 Chromobacterium violaceum
-Chlamydia pneumoniae J138
+Chlamydia pneumoniae
 Streptococcus mutans
 Lactobacillus plantarum
 Lactococcus lactis
