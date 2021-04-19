@@ -4,7 +4,7 @@ outfile = open("16Sout.txt","w")
 log = open("PhyloTreeLog.log","w")
 
 #File IO
-filename = "C:\\Users\\Delaney\\Desktop\\taxa_names.txt"
+filename = "taxa_names.txt"
 file = open(filename, 'r')
 speList = file.read().split("\n")
 #print(speList[0])
