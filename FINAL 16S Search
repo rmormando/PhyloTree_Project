@@ -1,6 +1,6 @@
 from Bio import Entrez, SeqIO
 
-outfile = open("16Sout.txt","w")
+outfile = open("16Sout.fasta","w")
 log = open("PhyloTreeLog.log","w")
 
 #File IO
