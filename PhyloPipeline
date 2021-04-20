@@ -31,3 +31,8 @@ log.close()
 
 #creating sequence alignment w/ MUSCLE via command line
 os.system("muscle -in seqs.fa -out seqs.afa")
+
+#creating newick tree using fasttree
+os.system("FastTree -gtr -nt < seqs.afa > tree_file")
+
+#at the end of this pipeline you should have "tree_file" that is a newick tree of the species you inputted in the beginning!
