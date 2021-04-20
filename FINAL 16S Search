@@ -28,3 +28,6 @@ outfile.close()
 log.close()
 
 #BIG thank you to Dr. Wheeler who helped me out on this code!
+
+#creating sequence alignment w/ MUSCLE via command line
+os.system("muscle -in seqs.fa -out seqs.afa")
