@@ -1,4 +1,5 @@
 from Bio import Entrez, SeqIO, Phylo
+import os
 
 outfile = open("16Sout.fasta","w")
 log = open("PhyloTreeLog.log","w")
