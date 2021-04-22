@@ -1,0 +1,12 @@
+from ete3 import Tree
+from Bio import Phylo
+
+#ete way
+file = "tree_file"
+t = Tree(file)
+print(t)
+
+#Phylo way
+temp = Phylo.read(file, 'newick')
+Phylo.draw_ascii(temp)
+
