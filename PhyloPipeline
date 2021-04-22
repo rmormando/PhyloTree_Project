@@ -1,4 +1,4 @@
-from Bio import Entrez, SeqIO
+from Bio import Entrez, SeqIO, Phylo
 
 outfile = open("16Sout.fasta","w")
 log = open("PhyloTreeLog.log","w")
@@ -24,15 +24,25 @@ for name in speList:
     else:
         log.write("No 16S sequence found for " + name + " so it was removed from tree building" + "\n") #let the user know if the code could not find a seq
 
-outfile.close()
-log.close()
-
 #BIG thank you to Dr. Wheeler who helped me out on this code!
 
 #creating sequence alignment w/ MUSCLE via command line
 os.system("muscle -in seqs.fa -out seqs.afa")
+log.write("Multiple Sequence Alignment made called seqs.afa" +"\n")
 
 #creating newick tree using fasttree
 os.system("FastTree -gtr -nt < seqs.afa > tree_file")
+log.write("Newick tree file made called tree_file" +"\n")
 
-#at the end of this pipeline you should have "tree_file" that is a newick tree of the species you inputted in the beginning!
+#you can visualize the newick file on a tree viewer online
+#but for convieience the next chunkof code will create a jpeg using the matplotlib python package
+#need to have matplotlib installed on device to draw the tree
+
+file = "tree_file"
+tree = Phylo.read(file, "newick")
+Phylo.draw(tree)
+log.write("Image of phylogenetic tree created" + "\n" + "Thank you for using our Phylogenetic Tree Maker!")
+
+#at the end of the pipeline, you have a multiple sequence alignment, newick file, and jpeg and a log file that documented everything done
+outfile.close()
+log.close()
