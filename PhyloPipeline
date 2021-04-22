@@ -1,14 +1,19 @@
 from Bio import Entrez, SeqIO, Phylo
 import os
 
-outfile = open("16Sout.fasta","w")
-log = open("PhyloTreeLog.log","w")
-
 #File IO
 filename = "taxa_names.txt"
 file = open(filename, 'r')
 speList = file.read().split("\n")
 #print(speList[0])
+for id in speList:
+    if id == "":
+        speList.remove(id)
+        
+os.mkdir("PhyloTreeDirectory")
+#os.chdir("PhyloTreeDirectory") switch to this command after the code has been run more than once
+outfile = open("16Sout.fasta","w")
+log = open("PhyloTreeLog.log","w")
 
 for name in speList:
     #name = "E.coli"
@@ -28,7 +33,7 @@ for name in speList:
 #BIG thank you to Dr. Wheeler who helped me out on this code!
 
 #creating sequence alignment w/ MUSCLE via command line
-os.system("muscle -in seqs.fa -out seqs.afa")
+os.system("muscle -in 16Sout.fasta -out seqs.afa")
 log.write("Multiple Sequence Alignment made called seqs.afa" +"\n")
 
 #creating newick tree using fasttree
@@ -47,3 +52,8 @@ log.write("Image of phylogenetic tree created" + "\n" + "Thank you for using our
 #at the end of the pipeline, you have a multiple sequence alignment, newick file, and jpeg and a log file that documented everything done
 outfile.close()
 log.close()
+file.close()
+record.close()
+log.close()
+speRecord.close()
+tree.close()
