@@ -2,12 +2,12 @@ from Bio import Entrez, SeqIO, Phylo
 import os
 
 #File IO
-filename = "taxa_names.txt"
+filename = "taxa_names.txt" #input name of your file containing list of species here
 file = open(filename, 'r')
 speList = file.read().split("\n")
 #print(speList[0])
 for id in speList:
-    if id == "":
+    if id == "":   #if the code reads an empty line into the list, an error will rise later so we filter them out now
         speList.remove(id)
         
 os.mkdir("PhyloTreeDirectory")
