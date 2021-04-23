@@ -11,7 +11,7 @@ for id in speList:
         speList.remove(id)
         
 os.mkdir("PhyloTreeDirectory")
-#os.chdir("PhyloTreeDirectory") switch to this command after the code has been run more than once
+#os.chdir("PhyloTreeDirectory") #switch to this command after the code has been run more than once
 outfile = open("16Sout.fasta","w")
 log = open("PhyloTreeLog.log","w")
 
@@ -46,14 +46,10 @@ log.write("Newick tree file made called tree_file" +"\n")
 
 file = "tree_file"
 tree = Phylo.read(file, "newick")
-Phylo.draw(tree)
+Phylo.draw_ascii(tree)
 log.write("Image of phylogenetic tree created" + "\n" + "Thank you for using our Phylogenetic Tree Maker!")
 
 #at the end of the pipeline, you have a multiple sequence alignment, newick file, and jpeg and a log file that documented everything done
 outfile.close()
 log.close()
 file.close()
-record.close()
-log.close()
-speRecord.close()
-tree.close()
