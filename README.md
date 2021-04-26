@@ -48,12 +48,12 @@ Here, we developed an easy-to-use pipeline that conveniently and effiecently rec
 ## Software Tools Required
 - Linux/Unix/Mac OS
 - Python
-  - os
-  - Biopython (Phlyo)
-- ETE
-- plottree
-- MUSCLE
-- FastTree
+  - os: https://docs.python.org/3/library/os.html
+  - Biopython (Phlyo): https://biopython.org/wiki/Phylo
+- ETE: http://etetoolkit.org/
+- plottree: https://github.com/iBiology/plottree
+- MUSCLE: http://www.drive5.com/muscle/
+- FastTree: http://www.microbesonline.org/fasttree/
 
 ## Install
 In order to run this code from your working directory, use this git command to clone this repository to your workspace:
