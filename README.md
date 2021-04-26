@@ -11,7 +11,7 @@ Here, we developed an easy-to-use pipeline that conveniently and effiecently rec
 
 
 ## Pipeline Workflow
-![Proposed solution PNG]()
+![Proposed solution PNG](https://github.com/rmormando/PhyloTree_Project/blob/3b32002f30345eb6d91092f85482454cf84e63be/workflow_images/good_phylo.jpeg)
 
 
 ## Features
