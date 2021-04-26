@@ -45,6 +45,15 @@ Here, we developed an easy-to-use pipeline that conveniently and effiecently rec
 - tree_file
 > Newick file of the generated tree from the test data
 
+## Software Tools Required
+- Linux/Unix/Mac OS
+- Python
+-- os
+-- Biopython (Phlyo)
+- ETE
+- plottree
+- MUSCLE
+- FastTree
 
 ## Install
 In order to run this code from your working directory, use this git command to clone this repository to your workspace:
@@ -59,7 +68,7 @@ cd PhyloTree_Project
 
 ## Directions
 
-To utilize the pipeline the view tool from teh ETE toolkit, MUSCLE, and FastTree must be installed on the local machine or server of your chosing.
+To utilize the pipeline the view tool from the ETE toolkit, MUSCLE, and FastTree must be installed on the local machine or server of your chosing.
 
 Follow the steps outlined in:
 ```
@@ -81,11 +90,11 @@ This file is an example input file provided in the repo.
 
 Run through the python script with the txt file to access all of the components of the pipeline:
 ```
-PhlyoPipeline.py
+python3 PhlyoPipeline.py
 ```
 This single python script file will retrieve the 16s raw reads from NCBI's public database in FASTA format, will create a sequence alignment of the generated FASTA file using MUSCLE, and will then create a tree in Newick format. You can then visualize the newick file on a tree viewer online (we recommend using iTOL), but for your convenience the file named:
 ```
-TreeVisualization.py
+python3 TreeVisualization.py
 ```
 will create a jpeg of the tree with the branch length using the view tool from the ETE toolkit. 
 
