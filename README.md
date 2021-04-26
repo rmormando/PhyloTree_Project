@@ -48,8 +48,8 @@ Here, we developed an easy-to-use pipeline that conveniently and effiecently rec
 ## Software Tools Required
 - Linux/Unix/Mac OS
 - Python
--- os
--- Biopython (Phlyo)
+  - os
+  - Biopython (Phlyo)
 - ETE
 - plottree
 - MUSCLE
