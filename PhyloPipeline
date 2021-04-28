@@ -42,15 +42,12 @@ os.system("FastTree -gtr -nt < seqs.afa > tree_file")
 log.write("Newick tree file made called tree_file" +"\n")
 
 #you can visualize the newick file on a tree viewer online
-#but for convieience the next chunkof code will create a jpeg using the matplotlib python package
-#need to have matplotlib installed on device to draw the tree
 
 file = "tree_file"
 tree = Phylo.read(file, "newick")
 Phylo.draw_ascii(tree)
 log.write("Image of phylogenetic tree created" + "\n" + "Thank you for using our Phylogenetic Tree Maker!")
 
-#at the end of the pipeline, you have a multiple sequence alignment, newick file, and jpeg and a log file that documented everything done
+#at the end of the pipeline, you have a multiple sequence alignment, newick file, an image, and a log file that documented everything done
 outfile.close()
 log.close()
-file.close()
