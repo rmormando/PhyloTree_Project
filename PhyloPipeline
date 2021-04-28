@@ -51,4 +51,3 @@ log.write("Image of phylogenetic tree created" + "\n" + "Thank you for using our
 #at the end of the pipeline, you have a multiple sequence alignment, newick file, an image, and a log file that documented everything done
 outfile.close()
 log.close()
-file.close()
