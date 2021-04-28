@@ -27,7 +27,7 @@ for name in speList:
         speHandle = Entrez.efetch(db="nucleotide",id = ID,rettype = "gb", retmode = 'text') #searching for the specific ID
         speRecord = SeqIO.read(speHandle,"genbank")
         name = name.replace(" ","_") #spaces must be replaced for FastTree further in pipeline
-        print(name)
+        #print(name)
         outfile.write(">" + name + " 16S sequence" + "\n" + str(speRecord.seq) + "\n")
         log.write("16S Sequence found for: " + name + "; written in 16Sout.txt" + "\n")
     else:
