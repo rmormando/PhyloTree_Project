@@ -2,7 +2,8 @@ from Bio import Entrez, SeqIO, Phylo
 import os
 
 #File IO
-filename = "taxa_names.txt" #input name of your file containing list of species here
+filename = input("Enter name of input file: ")
+#filename = "taxa_names.txt" #input name of your file containing list of species here
 file = open(filename, 'r')
 speList = file.read().split("\n")
 #print(speList[0])
@@ -11,7 +12,7 @@ for id in speList:
         speList.remove(id)
         
 os.mkdir("PhyloTreeDirectory")
-#os.chdir("PhyloTreeDirectory") #switch to this command after the code has been run more than once
+#os.chdir("PhyloTreeDirectory") # switch to this command after the code has been run more than once
 outfile = open("16Sout.fasta","w")
 log = open("PhyloTreeLog.log","w")
 
