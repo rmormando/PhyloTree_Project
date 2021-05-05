@@ -94,9 +94,7 @@ Use the link found above to learn more.
 
 Must be a text file of taxonomy names separated by line.
 ```
-10_taxta.txt
-20_taxa.txt
-100_taxa.txt
+#_taxa.txt
 ```
 Example input files provided in the repo (SampleTests folder).
 
