@@ -1,21 +1,22 @@
-from ete3 import Tree
+#from ete3 import Tree
 from Bio import Phylo
 #import os
 #import pylab
 
 #ete way
-file = "tree_file"
-t = Tree(file)
+#t = Tree(file)
 #print(t)
+
+#path = "PhlyoTreeDirectory/tree_file"
+#f = open(path)
+#f.read()
+
+# the name of the file
+file = "tree_file"
 
 #Phylo way -- terminal
 temp = Phylo.read(file, 'newick')
 Phylo.draw_ascii(temp) # prints out the tree to the terminal
-
-# 
-#path = "PhlyoTreeDirectory/tree_file"
-#f = open(path)
-#f.read()
 
 #Phylo way -- jpeg
 temp.ladderize() # Flip branches so deeper clades are displayed at top
