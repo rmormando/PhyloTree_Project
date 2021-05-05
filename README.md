@@ -16,8 +16,9 @@ Here, we developed an easy-to-use pipeline that conveniently and effiecently rec
 
 ## Features
 - Inputs only include species names.
-- One command line to build trees.
-- View trees using ETE.
+- One python script to build newick file.
+- One python scirpt to visualize the tree.
+- View trees using the phylo package.
 
 
 ## Files Included in the Repo
@@ -31,6 +32,9 @@ Here, we developed an easy-to-use pipeline that conveniently and effiecently rec
 
 - ETE_code.txt
 > Code to follow to download the ETE toolkit
+
+- plottree.txt
+> Code to follow to download the plottree tool
 
 - PhyloPipeline
 > Main python script for the pipeline
@@ -90,11 +94,13 @@ plottree.txt
 
 **1. Download the sample data set or use your own** 
 
-Make sure it's a text file of taxonomy names separated by line.
+Must be a text file of taxonomy names separated by line.
 ```
-taxa_names.txt
+10_taxta.txt
+20_taxa.txt
+100_taxa.txt
 ```
-This file is an example input file provided in the repo.
+Example input files provided in the repo (SampleTests folder).
 
 
 **2. Run through the pipeline** 
@@ -107,7 +113,7 @@ This single python script file will retrieve the 16s raw reads from NCBI's publi
 ```
 python3 TreeVisualization.py
 ```
-will create a jpeg of the tree with the branch length using the view tool from the ETE toolkit. 
+will create a jpeg of the tree with the branch length using the Phlyo package from BioPython. 
 
 
 ## Usage
